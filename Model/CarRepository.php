@@ -46,12 +46,19 @@ class CarRepository{
         return $row;
     }
 
-    public static function add(string $testo): int{
+    public static function addCar (string $targa, string $marca , string $modello, string $colore,
+                                   string $name_prop, string $surname_prop, string $codice_fiscale ): int{
         $pdo = Connection::getInstance();
-        $sql = 'INSERT INTO todo (testo) VALUES (:testo)';
+        $sql = 'INSERT INTO veicolo (targa,marca,modello,colore,name_prop,surname_prop,codice_fiscale) VALUES (:testo)';
         $stmt = $pdo->prepare($sql);
         $stmt->execute([
-                'testo' => $testo
+                'targa' => $targa,
+                'marca' => $marca,
+                'modello' =>$modello,
+                'colore' => $colore,
+                'nome_proprietario' => $name_prop,
+                'cognome_proprietario' => $surname_prop,
+                'codice_fiscale'=>$codice_fiscale
             ]
         );
         return $stmt->rowCount();
@@ -101,7 +108,7 @@ class CarRepository{
     public static function delete(int $id):bool
     {
         $pdo = Connection::getInstance();
-        $sql = 'DELETE FROM todo WHERE id = :id';
+        $sql = 'DELETE FROM veicolo WHERE id = :id';
         $stmt = $pdo->prepare($sql);
         $stmt->execute([
             'id' => $id
