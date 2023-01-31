@@ -37,7 +37,17 @@ if(isset($_POST['targa'])){
     $cars = CarRepository::searchOne($targa);
 }
 
-if(isset($_POST['']))
+if(isset($_GET['action'])){
+    $azione = $_GET['action'];
+    $id = $_GET['id'];
+
+    if($azione =='modifica'){
+        $cars = CarRepository::getCar($targa,$marca,$modello,$colore,$id);
+    }
+    else{
+        CarRepository::delete($id);
+    }
+}
 
 
 /*if(isset($_POST['traga']) == null){
