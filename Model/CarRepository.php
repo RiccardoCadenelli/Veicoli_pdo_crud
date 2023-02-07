@@ -49,15 +49,16 @@ class CarRepository{
     public static function addCar (string $targa, string $marca , string $modello, string $colore,
                                    string $name_prop, string $surname_prop, string $codice_fiscale ): int{
         $pdo = Connection::getInstance();
-        $sql = 'INSERT INTO veicolo (targa,marca,modello,colore,name_prop,surname_prop,codice_fiscale) VALUES (:testo)';
+        $sql = 'INSERT INTO veicolo (targa,marca,modello,colore,nome_proprietario,cognome_proprietario,codice_fiscale) 
+                VALUES (:targa, :marca, :modello, :colore, :name_prop, :surname_prop, :codice_fiscale)'; //:codice_fiscale
         $stmt = $pdo->prepare($sql);
         $stmt->execute([
                 'targa' => $targa,
                 'marca' => $marca,
                 'modello' =>$modello,
                 'colore' => $colore,
-                'nome_proprietario' => $name_prop,
-                'cognome_proprietario' => $surname_prop,
+                'name_prop' => $name_prop,
+                'surname_prop' => $surname_prop,
                 'codice_fiscale'=>$codice_fiscale
             ]
         );
