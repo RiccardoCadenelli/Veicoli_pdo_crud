@@ -24,7 +24,7 @@
             <label class="form-label" for="input-example-1">Targa</label>
         </div>
         <div class="col-9 col-sm-12">
-            <label class="form-input" type="text" id="input-example-1" placeholder="Targa"></label>
+            <input class="form-input" type="text" id="input-example-1" placeholder="Targa">
         </div>
     </div>
     <div class="form-group">
@@ -32,7 +32,7 @@
             <label class="form-label" for="input-example-1">Marca</label>
         </div>
         <div class="col-9 col-sm-12">
-            <label class="form-input" type="text" id="input-example-1" placeholder="Marca"></label>
+            <input class="form-input" type="text" id="input-example-1" placeholder="Marca"></input>
         </div>
     </div>
     <div class="form-group">
@@ -40,7 +40,7 @@
             <label class="form-label" for="input-example-1">Modello</label>
         </div>
         <div class="col-9 col-sm-12">
-            <label class="form-input" type="text" id="input-example-1" placeholder="Modello"></label>
+            <input class="form-input" type="text" id="input-example-1" placeholder="Modello"></input>
         </div>
     </div>
     <div class="form-group">
@@ -48,7 +48,7 @@
             <label class="form-label" for="input-example-1">Colore</label>
         </div>
         <div class="col-9 col-sm-12">
-            <label class="form-input" type="text" id="input-example-1" placeholder="Colore"></label>
+            <input class="form-input" type="text" id="input-example-1" placeholder="Colore"></input>
         </div>
     </div>
 
@@ -72,15 +72,16 @@
             <label class="form-label" for="input-example-1">Codice Fiscale</label>
         </div>
         <div class="col-9 col-sm-12">
-            <label class="form-input" type="text" id="input-example-1" placeholder="Codice Fiscale"></label>
+            <input class="form-input" type="text" id="input-example-1" placeholder="Codice Fiscale"></input>
         </div>
     </div>
+    <!--
     Targa:<input type="text" name="targa"><br>
     Marca:<input type="text" name="marca"><br>
     Modello:<input type="text" name="modello"><br>
     Colore:<input type="text" name="colore"><br>
 
-    Codice fiscale: <input type="text" name="codice_fiscale"><br>
+    Codice fiscale: <input type="text" name="codice_fiscale"><br>-->
 
     <input type="submit">
 </form>
